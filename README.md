@@ -20,4 +20,5 @@ You will need to change your Wifi SSID details and ESPHome node names.
 
 
 **THIS IS PROVIDED AS IS WITH NO WARRANTY. USE THIS AT YOUR OWN RISK.**
+
 It is provided incase anyone runs in to the same trouble that I did when converting one of these globes to ESPHome.
