@@ -7,8 +7,10 @@ The regular ESPHome "CWWW" component does not work correctly with these globes a
 
 GPIO Assignment:
 
-GPIO5: Colour Temperature 0 = Warm, 255 = Cold
-GPIO13: Brightness 0 = Off, 255 = Full brightness
+GPIO | Function | Notes
+------------ | ------------- | -------------
+**GPIO5** | Colour | Temperature 0 = Warm, 255 = Cold
+**GPIO13** | Brightness | 0 = Off, 255 = Full brightness
 
 To make this work in ESP home I used a custom light component. 
 
@@ -17,4 +19,5 @@ I have provided the ESPHome YAML config file for the globe, and the custom light
 You will need to change your Wifi SSID details and ESPHome node names.
 
 
-THIS IS PROVIDED AS IS WITH NO WARRANTY. USE THIS AT YOUR OWN RISK. It is provided incase anyone runs in to the same trouble that I did when converting one of these globes to ESPHome.
+**THIS IS PROVIDED AS IS WITH NO WARRANTY. USE THIS AT YOUR OWN RISK.**
+It is provided incase anyone runs in to the same trouble that I did when converting one of these globes to ESPHome.
