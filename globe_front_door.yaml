@@ -1,0 +1,47 @@
+esphome:
+  includes:
+    - esphome_arlec_light_component.h
+
+  name: arlec_smart_globe
+  platform: ESP8266
+  board: esp01_1m
+  esp8266_restore_from_flash: true
+
+wifi:
+  ssid: "SSID HERE"
+  password: "SSID KEY HERE"
+  reboot_timeout: 0s
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Globe Fallback Hotspot"
+    password: "password"
+
+captive_portal:
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  reboot_timeout: 0s
+  
+ota:
+
+output:
+  - platform: esp8266_pwm
+    id: dimmer
+    pin: GPIO5
+  - platform: esp8266_pwm
+    id: color_temp
+    pin: GPIO13
+
+light:
+  - platform: custom
+    lambda: |-
+      auto light_out = new ArlecCustomLight(id(dimmer), id(color_temp));
+      App.register_component(light_out);
+      return {light_out};
+    lights:
+      - name: "Arlec Smart Globe"
+        restore_mode: RESTORE_DEFAULT_ON
