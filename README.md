@@ -22,3 +22,7 @@ You will need to change your Wifi SSID details and ESPHome node names.
 **THIS IS PROVIDED AS IS WITH NO WARRANTY. USE THIS AT YOUR OWN RISK.**
 
 It is provided incase anyone runs in to the same trouble that I did when converting one of these globes to ESPHome.
+
+Thanks to this project for helping me get my head around writing a custom light component for ESPHome (https://github.com/madjam002)
+
+https://gist.github.com/madjam002/31cc88640efa370630fed6914fa4eb7f
