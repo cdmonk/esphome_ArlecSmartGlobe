@@ -9,7 +9,7 @@ GPIO Assignment:
 
 GPIO | Function | Notes
 ------------ | ------------- | -------------
-**GPIO5** | Colour | Temperature 0 = Warm, 255 = Cold
+**GPIO5** | Colour Temperature | Temperature 0 = Warm, 255 = Cold
 **GPIO13** | Brightness | 0 = Off, 255 = Full brightness
 
 To make this work in ESP home I used a custom light component. 
