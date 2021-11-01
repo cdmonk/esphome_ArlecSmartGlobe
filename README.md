@@ -1,3 +1,27 @@
+This is no longer needed as ESPhome now has a platform that works for these globes. Thanka to @Ando023 for posting it.
+
+ESP Home has a colour_temperature platform natively which can be used as below.
+
+
+output:
+  - platform: esp8266_pwm
+    id: dimmer
+    pin: GPIO5
+  - platform: esp8266_pwm
+    id: color_temp
+    pin: GPIO13
+    inverted: true
+
+light:
+- platform: color_temperature
+  name: "Office Light Bulb"
+  color_temperature: color_temp
+  brightness: dimmer
+  cold_white_color_temperature: 5700 K
+  warm_white_color_temperature: 3000 K
+
+
+
 # esphome_ArlecSmartGlobe
 Custom Light Component for the Arlec Smart LED Globe (GLD112HA) sold in Australia by Bunnings.
 
